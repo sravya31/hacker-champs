@@ -4,17 +4,18 @@
     <title>MedX</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<script>
+
+  </script>
+
   </head>
   <body class="container">
     <h1>LOGIN PAGE</h1>
-    <h3></br></br>Ownership Details </h3>
+    
     <div class="table-responsive">
       <table class="table table-bordered">
         <thead>
-          <tr>
-            <th>Property Name</th>
-            <th>Owner</th>
-          </tr>
+          
         </thead>
         <tbody id="propertyTable">
         </tbody>
@@ -22,9 +23,14 @@
     </div>
     <div class="table-responsive">
       <table class="table">
-       <tr><td></br></br><h3>Email or Username</h3></td><td><input id="username" name="username" required="required" type="text" placeholder="Enter your email or username" /></td></tr>
+       <tr><td>Email or Username<input id="username" name="username" required="required" type="text" placeholder="Enter your email or username" /></td></tr>
 
-       <tr><td></br></br><h3>Password</h3></td><td><input id="pwd" name="pwd" required="required" type="password" placeholder="Enter your password" /></td></tr>
+       <tr><td>Password<input id="pwd" name="pwd" required="required" type="password" placeholder="Enter your password" /></td></tr>
+<tr><td><input id="loginkeeping" name="loginkeeping" type="checkbox" value="loginkeeping" /> <label for="loginkeeping">Keep me logged in</label></td></tr>
+<tr><td><a href="#" onclick="welcomeUser()" class="btn btn-primary">Login</a></td></tr>
+<tr><td>Not a member yet ? <a class="to_register" href="new_signup.html" onsubmit="return validate()">Sign Up</a></td></tr>
+
+
       </table>
     </div>
   </body>
