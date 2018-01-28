@@ -4,12 +4,9 @@
     <title>MedX</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<script src="MedX1.js"></script>
 <script type="text/javascript">
-var a=document.getElementById("yes");
-var b=document.getElementById("no");
 
-a.onclick=handler1();
-b.onclick=handler2();
 
 function handler1(){
 	ide1.style.display='block';
@@ -42,11 +39,18 @@ return false;
 return true;
 }
   </script>
+<style>
+#h11{
+text-align: center;
+    color: blue;
+}
 
+
+</style>
 
   </head>
   <body class="container">
-    <h1>SIGNUP PAGE</h1>
+    <h1 id="h11">SIGNUP PAGE</h1>
        <div class="table-responsive">
       <table class="table table-bordered" style="text-align:centre">
         <thead>
@@ -60,32 +64,36 @@ return true;
     </div>
     <div class="table-responsive">
       <table class="table">
-       <tr><td>UserName<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Enter your username" /></td></tr>
-       <tr><td>FirstName<input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="Enter your firstname" /></td></tr>
-<tr><td>LastName<input id="Lastnamesignup" name="Lastnamesignup" required="required" type="text" placeholder="Enter your lastname" /></td></tr>
-<tr><td>EmailId<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="Enter your email ID" /></td></tr>
-<tr><td>Contact Number<input id="phone" name="phone" required="required" type="text" placeholder="Enter your phone number" /></td></tr>
-<tr><td><label class="same" for="pwd" data-icon="p">Password<input id="pwd" name="pwd" required="required" type="password" placeholder="Enter your password" /></td></tr>
-<tr><td><label class="same" for="pwd" data-icon="p">Confirm Password<input id="cpwd" name="cpwd" required="required" type="password" placeholder="Confirm your password" /></td></tr>
-<tr><td>DateOfBirth<input id="dob" name="dob" required="required" type="text" placeholder="dd-mm-yyyy" /></td></tr>
-
+       <tr><td>UserName</td><td><input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Enter your username" /></td></tr>
+       <tr><td>FirstName</td><td><input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="Enter your firstname" /></td></tr>
+<tr><td>LastName</td><td><input id="Lastnamesignup" name="Lastnamesignup" required="required" type="text" placeholder="Enter your lastname" /></td></tr>
+<tr><td>EmailId</td><td><input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="Enter your email ID" /></td></tr>
+<tr><td>Contact Number</td><td><input id="phone" name="phone" required="required" type="text" placeholder="Enter your phone number" /></td></tr>
+<tr><td><label class="same" for="pwd" data-icon="p">Password</td><td><input id="pwd" name="pwd" required="required" type="password" placeholder="Enter your password" /></td></tr>
+<tr><td><label class="same" for="pwd" data-icon="p">Confirm Password</td><td><input id="cpwd" name="cpwd" required="required" type="password" placeholder="Confirm your password" /></td></tr>
+<tr><td>DateOfBirth</td><td><input id="dob" name="dob" required="required" type="text" placeholder="dd-mm-yyyy" /></td></tr>
+<tr><td>Address</td><td><input id="Address" type="textarea" required="required" placeholder="Enter your address here!:"/></td><tr>
 </table>
 </div>
 <tr><td>Are you a medical practitioner?</td>
-<form><input id="yes" type="radio" name="no" value="Yes" onclick=handler1();> Yes</td>
- <input id="no" type="radio" name="no" value="No" onclick=handler2();> No</td></tr>
+<form><input id="yes" type="radio" name="no" value="Yes" onclick="handler1();"> Yes</td>
+ <input id="no" type="radio" name="no" value="No" onclick="handler2();"> No</td></tr>
 </form>
+
+
 <div id="ide1" style="display:none;">
-<p>Practitioner ID<input id="pid" name="pid" required="required" type="text" placeholder="Enter your practitioner ID" /></p></div>
+<table>
+<tr><td>Practitioner ID</td><td><input id="pid" name="pid" required="required" type="text" placeholder="Enter your practitioner ID"/></td></tr>
+</table>
+</div>
+
+
 <div id="ide2" style="display:none;">
 
    <label for="file">Choose file to upload</label>
    <input type="file" id="file" name="file" multiple>
  </p></div>
-<a href="new_login.html" class="btn btn-primary" onclick="return validate()";>Submit</a>
-
-
-       
+<a href="new_login.html" class="btn btn-primary" onclick="signup();">Submit</a>
 
 
   </body>
