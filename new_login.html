@@ -4,13 +4,37 @@
     <title>MedX</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-<script>
 
+
+<style>
+#h11{
+text-align: center;
+    color: blue;
+}
+
+
+</style>
+
+<script>
+var a=document.getElementById("yes");
+var b=document.getElementById("no");
+
+a.onclick=handler1();
+b.onclick=handler2();
+
+function handler1(){
+	ide1.style.display='block';
+	if(ide2.style.display=='block'){ ide2.style.display='none'; b=null;}
+}
+function handler2(){
+	ide2.style.display='block';
+if(ide1.style.display=='block') {ide1.style.display='none'; a=null;}
+}
   </script>
 
   </head>
   <body class="container">
-    <h1>LOGIN PAGE</h1>
+    <h1 id="h11">LOGIN PAGE</h1>
     
     <div class="table-responsive">
       <table class="table table-bordered">
@@ -23,12 +47,39 @@
     </div>
     <div class="table-responsive">
       <table class="table">
-       <tr><td>Email or Username<input id="username" name="username" required="required" type="text" placeholder="Enter your email or username" /></td></tr>
+       <tr><td>Email or Username</td><td><input id="username" name="username" required="required" type="text" placeholder="Enter your email or username" /></td></tr>
 
-       <tr><td>Password<input id="pwd" name="pwd" required="required" type="password" placeholder="Enter your password" /></td></tr>
+       <tr><td>Password</td><td><input id="pwd" name="pwd" required="required" type="password" placeholder="Enter your password" /></td></tr>
+</table>
+<form>
+<tr><td>Are you a medical practitioner?</td>
+<form><input id="yes" type="radio" name="no" value="Yes" onclick=handler1();> Yes</td>
+ <input id="no" type="radio" name="no" value="No" onclick=handler2();> No</td></tr>
+</form>
+
+<div id="ide1" style="display:none;">
+
+<table>
+<tr><td>Practitioner ID</td><td><input id="pid" name="pid" required="required" type="text" placeholder="Enter your practitioner ID"/></td></tr>
+<tr><td><input id="logindkeeping" name="logindkeeping" type="checkbox" value="loginkeeping" /> <label for="loginkeeping">Keep me logged in</label></td></tr>
+<tr><td><a href="Welcome_Doctor.html" onclick="welcomeUser()" class="btn btn-primary">Login As Doctor</a></td></tr>
+</table>
+</p></div>
+
+<div id="ide2" style="display:none;">
+<table>
 <tr><td><input id="loginkeeping" name="loginkeeping" type="checkbox" value="loginkeeping" /> <label for="loginkeeping">Keep me logged in</label></td></tr>
-<tr><td><a href="#" onclick="welcomeUser()" class="btn btn-primary">Login</a></td></tr>
+<tr><td><a href="Welcome_Patient.html" onclick="welcomeUser()" class="btn btn-primary">Login</a></td></tr>
+</table> 
+</p></div>
+
+</table>
+
+<table>
+<div>
 <tr><td>Not a member yet ? <a class="to_register" href="new_signup.html" onsubmit="return validate()">Sign Up</a></td></tr>
+</div>
+</table>
 
 
       </table>
